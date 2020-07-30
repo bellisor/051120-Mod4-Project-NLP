@@ -113,3 +113,7 @@ def plot_confusion_matrix(cm, classes,
 
     plt.ylabel('True label', fontsize=25)
     plt.xlabel('Predicted label', fontsize=25)
+
+def sentiment_analyzer_scores(sentence):
+    score = analyser.polarity_scores(sentence)
+    print("{:-<40} {}".format(sentence, str(score)))
